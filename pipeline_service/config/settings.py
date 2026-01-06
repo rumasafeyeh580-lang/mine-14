@@ -28,8 +28,8 @@ class Settings(BaseSettings):
 
     # Trellis settings
     trellis_model_id: str = Field(default="jetx/trellis-image-large", env="TRELLIS_MODEL_ID")
-    trellis_sparse_structure_steps: int = Field(default=10, env="TRELLIS_SPARSE_STRUCTURE_STEPS")
-    trellis_sparse_structure_cfg_strength: float = Field(default=6.5, env="TRELLIS_SPARSE_STRUCTURE_CFG_STRENGTH")
+    trellis_sparse_structure_steps: int = Field(default=12, env="TRELLIS_SPARSE_STRUCTURE_STEPS")
+    trellis_sparse_structure_cfg_strength: float = Field(default=7.5, env="TRELLIS_SPARSE_STRUCTURE_CFG_STRENGTH")
     trellis_slat_steps: int = Field(default=12, env="TRELLIS_SLAT_STEPS")
     trellis_slat_cfg_strength: float = Field(default=3.5, env="TRELLIS_SLAT_CFG_STRENGTH")
     trellis_num_oversamples: int = Field(default=4, env="TRELLIS_NUM_OVERSAMPLES")
@@ -52,7 +52,7 @@ class Settings(BaseSettings):
     limit_padding: bool = Field(default=True, env="LIMIT_PADDING")
 
     # Post-processing settings
-    enable_ply_color_correction: bool = Field(default=False, env="ENABLE_PLY_COLOR_CORRECTION")
+    enable_ply_color_correction: bool = Field(default=True, env="ENABLE_PLY_COLOR_CORRECTION")
     ply_color_correction_strength: float = Field(default=0.7, env="PLY_COLOR_CORRECTION_STRENGTH")
 
     class Config:
